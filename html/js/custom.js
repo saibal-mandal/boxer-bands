@@ -61,6 +61,33 @@ $('.scrollup').click(function(){
     }
 })
 
+/*==products slider js==*/
+  $('#owldemo2').owlCarousel({
+    loop:true,
+    margin:10,
+    navText : ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+    nav:true,
+    dots:false,
+    autoplay:true,
+    smartSpeed: 950,
+    slideSpeed : 400,
+    paginationSpeed : 800,
+    responsive:{
+        0:{
+            items:1
+        },
+        575:{
+            items:2
+        },
+        900:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+})  
+
 /*==testimonials slider js==*/
   $('#owldemo3').owlCarousel({
     loop:true,
@@ -113,9 +140,30 @@ $('.scrollup').click(function(){
     }
 })
 
-
-
-
+/*==product-slider js==*/
+$('.product-slider').owlCarousel({
+  loop:true,
+  margin:0,
+  navText : ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+  nav:true,
+  dots:false,
+  autoplay:5000,
+  smartSpeed: 950,
+  slideSpeed : 400,
+  paginationSpeed : 800,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:2
+      },
+      1000:{
+          items:4
+      }
+  }
+})
+  
 
 //Date Picker
  $('#datetimepicker1').datetimepicker({
@@ -124,3 +172,21 @@ $('.scrollup').click(function(){
   format:'d/m/Y',
   formatDate:'Y/m/d',
     }); 
+
+/*==zoomimage==*/
+$(document).ready(function(){
+  $('.zoomimage').elevateZoom();
+});
+
+/*     click product images        */
+      $(document).ready(function(){
+        $('.slid-img').click(function(e){
+          e.preventDefault();
+          
+          var newImage = $(this).attr('href');
+          $('.zoompro img').attr('src', newImage);
+          var ez =   $('.zoomimage').data('elevateZoom');   
+          ez.swaptheimage(newImage, newImage); 
+
+        })
+      });  
