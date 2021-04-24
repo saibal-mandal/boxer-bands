@@ -135,6 +135,7 @@ img {
 	font-size: 14px;
 	font-weight: 300;
 }
+.top-header ul li:last-child { margin-right: 0; }
 .top-header ul li a{
     color: #fff;
     font-size: 15px;
