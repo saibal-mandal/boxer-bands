@@ -650,7 +650,7 @@ img {
 .singleBlog .card-body {
 	width: 95%;
 	min-height: 126px;
-	background: rgba(255,255,255,0.65);
+	background: rgb(193 193 193 / 65%);
 	position: absolute;
 	bottom: 0;
 	left: 0;
